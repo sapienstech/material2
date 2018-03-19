@@ -92,7 +92,9 @@ export class MatDialogTitle implements OnInit {
     }
 
     if (this._dialogRef) {
+      console.log('BRACHI: found dialog ref!' + this._dialogRef);
       Promise.resolve().then(() => {
+        console.log('BRACHI: in promise of dialogRef');
         const container = this._dialogRef._containerInstance;
 
         if (container && !container._ariaLabelledBy) {
